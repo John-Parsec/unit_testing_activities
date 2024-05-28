@@ -3,8 +3,7 @@ from atividades.src.atividade07_db import User, Database, UserService
 
 def test_create_user():
     user = User(name="John", email="john@email.com")
-    assert user.name == "John"
-    assert user.email == "john@email.com"
+    assert user.name == "John" and user.email == "john@email.com"
 
 def test_save_user():
     user = User(name="John", email="john@email.com")
