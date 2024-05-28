@@ -1,5 +1,5 @@
 import pytest
-from atividade03_find_max import find_max
+from atividades.src.atividade03_find_max import find_max
 
 def test_find_max_with_positive_numbers():
     assert find_max([1, 2, 3, 4, 5]) == 5

@@ -1,5 +1,5 @@
 import pytest
-from atividade04_sort_numbers import sort_numbers
+from atividades.src.atividade04_sort_numbers import sort_numbers
 
 def test_sort_numbers_with_unsorted_list():
     assert sort_numbers([3, 1, 2]) == [1, 2, 3]
