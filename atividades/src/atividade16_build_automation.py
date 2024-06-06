@@ -52,13 +52,13 @@ def automation_build(automation_id: int):
         if len(robots) == 0: 
             return f'Automation {automation.name} has no robots to execute.'
 
-        automation.status = StatusEnum.RUNNING.value
+        automation.status = StatusEnum.RUNNING
         session.commit()
         orchestration_valid = True
         for robot in robots:
-            if robot.installed != InstallationEnum.INSTALLED.value:
+            if robot.installed != InstallationEnum.INSTALLED:
                 orchestration_valid = False
-            if robot.installed == InstallationEnum.NOT_INSTALLED.value:
+            if robot.installed == InstallationEnum.NOT_INSTALLED:
                 send_to_pack(robot.id) # async call
 
         # if all robots are installed, create orchestration
